@@ -1,9 +1,10 @@
+import './Gif.css'
+
 export default function Gif ({ id, title, url } = {}) {
   return (
-    <div key={id}>
+    <a href='#' className='Gif' key={id}>
       <h4>{title}</h4>
-      <small>{id}</small>
       <img src={url} alt={id} />
-    </div>
+    </a>
   )
 }
