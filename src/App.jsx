@@ -21,7 +21,11 @@ export default function App () {
     >
       <div className='App'>
         <h1>
-          <Link to='/'>GIFFY</Link>
+          <Link to='/'>
+            <figure className='App-logo'>
+              <img alt='Giffy logo' src='/logo.png' />
+            </figure>
+          </Link>
         </h1>
         <GifContextProvider>
           <Route component={Home} path='/' />
