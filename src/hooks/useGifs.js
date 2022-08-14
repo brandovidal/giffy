@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
-import GifContext from '../context/GifContext'
-import getGifs from '../services/getGifs'
+import GifContext from '@/context/GifContext'
+import getGifs from '@/services/getGifs'
 
 export function useGifs ({ keyword } = { keyword: null }) {
   const [loading, setLoading] = useState(false)

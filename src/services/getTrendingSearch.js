@@ -3,7 +3,6 @@ import { API_KEY, API_URL } from './setting'
 const fromApiResponseToGifs = (apiResponse) => {
   const { data = [] } = apiResponse
   if (Array.isArray(data)) {
-    console.log({ data })
     return data
   }
   return []
