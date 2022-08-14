@@ -9,21 +9,25 @@ import Detail from './pages/Detail'
 
 // Context
 import StaticContext from './context/StaticContext'
+import { GifContextProvider } from './context/GifContext'
 
 export default function App () {
   return (
-    <StaticContext.Provider value={{
-      name: 'midudev',
-      suscribeteAlCabal: true
-    }}
+    <StaticContext.Provider
+      value={{
+        name: 'midudev',
+        suscribeteAlCanal: true
+      }}
     >
       <div className='App'>
         <h1>
           <Link to='/'>GIFFY</Link>
         </h1>
-        <Route component={Home} path='/' />
-        <Route component={SearchResults} path='/search/:keyword' />
-        <Route component={Detail} path='/gif/:id' />
+        <GifContextProvider>
+          <Route component={Home} path='/' />
+          <Route component={SearchResults} path='/search/:keyword' />
+          <Route component={Detail} path='/gif/:id' />
+        </GifContextProvider>
       </div>
     </StaticContext.Provider>
   )

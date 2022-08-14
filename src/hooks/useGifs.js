@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import GifContext from '../context/GifContext'
 import getGifs from '../services/getGifs'
 
 export function useGifs ({ keyword } = { keyword: null }) {
   const [loading, setLoading] = useState(false)
-  const [gifs, setGifs] = useState([])
+  const { gifs, setGifs } = useContext(GifContext)
 
   useEffect(
     function () {
@@ -16,7 +17,7 @@ export function useGifs ({ keyword } = { keyword: null }) {
         window.localStorage.setItem('lastKeyword', keyword)
       })
     },
-    [keyword]
+    [keyword, setGifs]
   )
 
   return { loading, gifs }

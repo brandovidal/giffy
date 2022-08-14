@@ -2,7 +2,7 @@ import { createContext } from 'react'
 
 const StaticContext = createContext({
   name: 'sin provider',
-  suscribeteAlCabal: true
+  suscribeteAlCanal: true
 })
 
 export default StaticContext
