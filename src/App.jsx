@@ -3,13 +3,13 @@ import './App.css'
 import { Link, Route } from 'wouter'
 
 // Pages
-import Home from './pages/Home'
-import SearchResults from './pages/SearchResults'
-import Detail from './pages/Detail'
+import Home from '@/pages/Home'
+import SearchResults from '@/pages/SearchResults'
+import Detail from '@/pages/Detail'
 
 // Context
-import StaticContext from './context/StaticContext'
-import { GifContextProvider } from './context/GifContext'
+import StaticContext from '@/context/StaticContext'
+import { GifContextProvider } from '@/context/GifContext'
 
 export default function App () {
   return (

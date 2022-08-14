@@ -1,7 +1,7 @@
 import './ListOfGifs.css'
 
 // Components
-import Gif from '../Gif'
+import Gif from '@/components/Gif'
 
 export default function ListOfGifs ({ gifs }) {
   return (
