@@ -11,9 +11,9 @@ export default function useNearScreen ({ distance = '100px' } = {}) {
       const el = entries[0]
       console.log(el.isIntersecting)
 
-      if (el?.isIntersecting) {
+      if (el.isIntersecting) {
         setNearScreen(true)
-        observer.disconnect()
+        observer.unobserve(el.target)
       }
     }
 

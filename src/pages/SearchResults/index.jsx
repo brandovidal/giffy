@@ -1,5 +1,7 @@
-import ListOfGifs from '@/components/ListOfGifs'
 import { useGifs } from '@/hooks/useGifs'
+
+import ListOfGifs from '@/components/ListOfGifs'
+import Spinner from '@/components/Spinner'
 
 export default function SearchResults ({ params }) {
   const { keyword = '' } = params
@@ -7,8 +9,16 @@ export default function SearchResults ({ params }) {
 
   return (
     <>
-      <h3 className='App-title'>{decodeURI(keyword)}</h3>
-      <ListOfGifs loading={loading} gifs={gifs} />
+      {loading
+        ? (
+          <Spinner />
+          )
+        : (
+          <>
+            <h3 className='App-title'>{decodeURI(keyword)}</h3>
+            <ListOfGifs gifs={gifs} />
+          </>
+          )}
     </>
   )
 }
