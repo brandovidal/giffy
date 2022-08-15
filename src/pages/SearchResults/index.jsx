@@ -7,6 +7,8 @@ export default function SearchResults ({ params }) {
   const { keyword = '' } = params
   const { loading, gifs } = useGifs({ keyword })
 
+  const handleNextPage = () => {}
+
   return (
     <>
       {loading
@@ -19,6 +21,8 @@ export default function SearchResults ({ params }) {
             <ListOfGifs gifs={gifs} />
           </>
           )}
+      <br />
+      <button onClick={handleNextPage}>Get next page</button>
     </>
   )
 }

@@ -4,6 +4,7 @@ import getGifs from '@/services/getGifs'
 
 export function useGifs ({ keyword } = { keyword: null }) {
   const [loading, setLoading] = useState(false)
+  // const [page, setPage] = useState(0)
   const { gifs, setGifs } = useContext(GifContext)
 
   useEffect(
